@@ -1,3 +1,4 @@
+import 'package:demo_1/egg_page.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyAppState extends ChangeNotifier {
+  var token = ".***.3KvUUJrqrhCQ8ip0lQAmr4PN67lquX_9d9TAiNB_1VQ";
   var current = WordPair.random();
 
   void getNext() {
@@ -61,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case 0:
         page = GeneratorPage();
       case 1:
-        page = FavoritesPage();
+        page = EggPage();
       default:
         throw UnimplementedError('no widget for $selectedIndex');
     }
